@@ -1,0 +1,274 @@
+/* :root{
+  --body_background: white;
+  --body_color: #333;
+  --link_color:  #333;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* body.light {
+  --background-color: var(--white);
+  --text-color: var(--black);
+  --font-weight: 400;
+}
+body.dark {
+  --background-color: var(--black);
+  --text-color: var(--white);
+  --font-weight: 500;;
+} */
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.App h1 {
+    position: absolute;
+    left: 5%;
+    width: 50%;
+    font-weight: 700;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.button {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #424347;
+    border-radius: 20px;
+    padding: 12px;
+    transition: all 0.5s ease;
+}
+
+.button a:hover {
+    color: #ffffff;
+    background: linear-gradient(to left, #e69aea, #9e34be);
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 32%;
+}
+
+.navbar a {
+    margin-right: 20px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 650;
+    font-size: 17px;
+    color: #333;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    background: #9e34be;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+.content {
+  position: relative;
+  top: 260px;
+}
+.content h1{
+  position: relative;
+  padding-bottom: 20px;
+  left: 82px;
+}
+.content h3{
+  position: relative;
+  left: 85px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
+
+.push{ 
+  height: 100px;
+}
+
+ /* Image one is given here  */
+ .image{
+  position: relative;
+  left: 850px;
+  bottom: 350px;
+  z-index: -1;
+}
+
+
+
+.footer{
+  position: relative;
+  padding: 32px;
+  max-width: 1703px;
+  color: #ffffff;
+  background-color: #424347;
+} 
+ul{
+  list-style: none;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 900;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #9e34be;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #9d9d9d;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fefbfb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #9e34be;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: rgba(225, 225,225,0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* Button in below */
+.content a{
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+  left: 60px;
+  top: 30px;
+  color: #24262b;
+  /* border: 1px solid #333; */
+  margin-left: 10px;
+  padding: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.content a:hover{
+  /* color: #ffffff; when the icons will be added this color will be removed */
+  box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  /* background: linear-gradient(to top,#c134c1, #884dc2); */
+  /* transition: background 0.3s ease-in-out, color 0.3s ease-in-out; */
+}
+#switch {
+  position: relative;
+  display: inline-block;
+  top: 15px;
+  left: 1250px;
+  width: 60px;
+  height: 34px;
+}
+
+/* Style for the switch input */
+#switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style for the switch slider */
+#slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 50px;
+}
+
+/* Style for the switch slider when it's in the "on" position */
+#slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50px;
+  transition: .4s;
+}
+
+/* Style for the switch input when it's checked (on) */
+input:checked + #slider {
+  background-color: #2196F3;
+}
+
+/* Style for the switch slider when it's in the "on" position */
+input:checked + #slider:before {
+  transform: translateX(26px);
+}
